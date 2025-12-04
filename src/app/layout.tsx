@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Providers } from '@/components/Providers'
 import { Bounce, ToastContainer } from 'react-toastify'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'MetaNode Stake',
@@ -30,7 +32,11 @@ export default function RootLayout({
             theme="light"
             transition={Bounce}
           />
-          <div>{children}</div>
+          <div className="bg-main min-h-screen flex flex-col">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>
