@@ -39,3 +39,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* 滚动条整体样式 */
+::-webkit-scrollbar {
+  width: 10px; /* 垂直滚动条宽度 */
+  height: 10px; /* 水平滚动条高度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500/70 rounded-full hover:bg-primary-500 transition-colors duration-200;
+}
